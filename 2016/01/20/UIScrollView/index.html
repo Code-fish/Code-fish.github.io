@@ -5,40 +5,35 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: UIScrollView
-date: 2016-01-19 22:20:38
-tags:官方文档关键词：
-
+  <meta name="description" content="title: UIScrollViewdate: 2016-01-19 22:20:38
+tags:总结：内容的大小和相对位置；滑动和拖拽属性设置；滑动和拖拽的事件响应；滑动条的样式设置；滑动式的动画；
+类库API：
 用来展示比屏幕大的内容
 通过滑动和缩放手势进行查看
-是tableview 和 textView ，collectionView，….的父类
-本质是uiview, 是一个whose origin is adjustable over the content view.
-必须知道c">
+三个孩子：tableview, textview, collectionview
+本质是uiview, 是一个whose orig">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/2016/01/20/UIScrollView/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="title: UIScrollView
-date: 2016-01-19 22:20:38
-tags:官方文档关键词：
-
+<meta property="og:description" content="title: UIScrollViewdate: 2016-01-19 22:20:38
+tags:总结：内容的大小和相对位置；滑动和拖拽属性设置；滑动和拖拽的事件响应；滑动条的样式设置；滑动式的动画；
+类库API：
 用来展示比屏幕大的内容
 通过滑动和缩放手势进行查看
-是tableview 和 textView ，collectionView，….的父类
-本质是uiview, 是一个whose origin is adjustable over the content view.
-必须知道c">
-<meta property="og:updated_time" content="2016-01-19T23:51:03.000Z">
+三个孩子：tableview, textview, collectionview
+本质是uiview, 是一个whose orig">
+<meta property="og:image" content="http://yoursite.com/file:///Users/Dinu/Library/Developer/Shared/Documentation/DocSets/com.apple.adc.documentation.iOS.docset/Contents/Resources/Documents/documentation/WindowsViews/Conceptual/UIScrollView_pg/Art/scrollViews.jpg">
+<meta property="og:updated_time" content="2016-01-20T00:29:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="title: UIScrollView
-date: 2016-01-19 22:20:38
-tags:官方文档关键词：
-
+<meta name="twitter:description" content="title: UIScrollViewdate: 2016-01-19 22:20:38
+tags:总结：内容的大小和相对位置；滑动和拖拽属性设置；滑动和拖拽的事件响应；滑动条的样式设置；滑动式的动画；
+类库API：
 用来展示比屏幕大的内容
 通过滑动和缩放手势进行查看
-是tableview 和 textView ，collectionView，….的父类
-本质是uiview, 是一个whose origin is adjustable over the content view.
-必须知道c">
+三个孩子：tableview, textview, collectionview
+本质是uiview, 是一个whose orig">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -87,7 +82,7 @@ tags:官方文档关键词：
         <section id="main"><article id="post-UIScrollView" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/20/UIScrollView/" class="article-date">
-  <time datetime="2016-01-19T23:51:03.000Z" itemprop="datePublished">2016-01-20</time>
+  <time datetime="2016-01-20T00:29:16.000Z" itemprop="datePublished">2016-01-20</time>
 </a>
     
   </div>
@@ -96,16 +91,15 @@ tags:官方文档关键词：
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>title: UIScrollView</p>
-<p>date: 2016-01-19 22:20:38</p>
-<h2 id="tags_3A"><a href="#tags_3A" class="headerlink" title="tags:"></a>tags:</h2><p>官方文档关键词：</p>
-<ol>
+        <h2 id="title_3A_UIScrollView"><a href="#title_3A_UIScrollView" class="headerlink" title="title: UIScrollView"></a>title: UIScrollView</h2><p>date: 2016-01-19 22:20:38</p>
+<h2 id="tags_3A"><a href="#tags_3A" class="headerlink" title="tags:"></a>tags:</h2><p>总结：内容的大小和相对位置；滑动和拖拽属性设置；滑动和拖拽的事件响应；滑动条的样式设置；滑动式的动画；</p>
+<h3 id="u7C7B_u5E93API_uFF1A"><a href="#u7C7B_u5E93API_uFF1A" class="headerlink" title="类库API："></a>类库API：</h3><ol>
 <li>用来展示比屏幕大的内容</li>
 <li>通过滑动和缩放手势进行查看</li>
-<li>是tableview 和 textView ，collectionView，….的父类</li>
+<li>三个孩子：tableview, textview, collectionview</li>
 <li>本质是uiview, 是一个whose origin is adjustable over the content view.</li>
 <li>必须知道content size</li>
-<li>内容展示：<ol>
+<li>展示内容边界：大小和相对于scrollview的偏移量：<ol>
 <li>contentSize: CGSize</li>
 <li>contentOffset: CGPoint</li>
 <li>setContentOffset: contentOffset</li>
@@ -118,7 +112,6 @@ tags:官方文档关键词：
 <li>点击状态栏是否回滚到顶部？（比如微信朋友圈）scrollsToTop: Bool</li>
 <li>是否整页滑动？pagingEnabled: Bool</li>
 <li>是否有缓冲区？bounces: Bool</li>
-<li>​</li>
 <li>滑动的加速度decelerationRate: CGFloat</li>
 <li>用户是否开始滚了dragging: Bool { get }</li>
 <li>用户是否触碰到了content？这时候不一定开始滚了。tracking: Bool { get }</li>
@@ -179,11 +172,41 @@ tags:官方文档关键词：
 </ol>
 </li>
 </ol>
+<h3 id="u7F16_u7A0B"><a href="#u7F16_u7A0B" class="headerlink" title="编程"></a>编程</h3><ol>
+<li><p>创建和设置Scorllview</p>
+<ol>
+<li>storyboard创建</li>
+<li>代码创建</li>
+<li>addSubviews</li>
+<li>设置content size, content offset, 滑动条</li>
+</ol>
+</li>
+<li><p>滚动</p>
+<ol>
+<li>滚动到指定位置</li>
+<li>回到顶部</li>
+<li>滚到到需要展示的矩形区域？？？？</li>
+</ol>
+</li>
+<li><p>手势缩放</p>
+</li>
+<li><p>点击缩放</p>
+</li>
+<li><p>整页滑动</p>
+<ol>
+<li>设置是否整页滚动</li>
+<li>设置整页滚动的subview</li>
+</ol>
+</li>
+<li><p>Scrollview 嵌套 Scrollview </p>
+<p><img src="file:///Users/Dinu/Library/Developer/Shared/Documentation/DocSets/com.apple.adc.documentation.iOS.docset/Contents/Resources/Documents/documentation/WindowsViews/Conceptual/UIScrollView_pg/Art/scrollViews.jpg" alt=""></p>
+</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/20/UIScrollView/" data-id="cijlhnaje0000uz68y3vsgfpj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/20/UIScrollView/" data-id="cik6km0cd0000kg68mewppdu6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -191,6 +214,15 @@ tags:官方文档关键词：
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/01/20/Windows-Views-Animastions/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
   
   
     <a href="/2016/01/19/hello-my-new-blog/" id="article-nav-older" class="article-nav-link-wrap">
@@ -217,7 +249,7 @@ tags:官方文档关键词：
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -227,6 +259,14 @@ tags:官方文档关键词：
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/02/03/我的iOS开发学习之路/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/01/20/Windows-Views-Animastions/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2016/01/20/UIScrollView/">(no title)</a>
